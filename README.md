@@ -8,16 +8,19 @@ More specifically, for a given drift $a(x,t)$ and diffusivity $D(x,t)$ we consid
 
 $$\partial_t P = - \partial_x \left( a P\right) + \partial_x^2 \left(D P\right),$$
 
-on a time-dependent domain $x \in [x_l(t), x_r(t)]$, and with time-dependent absorbing boundary conditions
+on a time-dependent domain $x \in [\varphi(t)-R(t), \varphi(t) + R(t)]$, where $\varphi(t)$ is the instantaneous domain center and $2R(t)$ the instantaneous domain diameter. We refer to the domain center also as reference path, and the time-dependent domain as tube.
 
-$$P(x_l(t),t) = P(x_r(t),t) = 0$$
+We consider absorbing boundary conditions
 
-for the density $P(x,t)$. Due to the absorbing boundary conditions, the total density within the domain, given by $$P(t) = \int_{x_l(t)}^{x_r(t)}dx\,P(x,t),$$ is a decaying function of time.
+$$P(\varphi(t)-R(t),t) = P(\varphi(t)+R(t),t) = 0$$
 
-This python module implements perturbative analytical results for both the decay rate of the density, $$\alpha = - \frac{\partial_t P(t)}{P(t)},$$ as well as the normalized density within the domain,
-$$P^N(x,t) = \frac{ P(x,t)}{P(t)}.$$
+for the density $P(x,t)$. Due to the absorbing boundary conditions, the total density within the domain, given by $$P(t) = \int_{\varphi(t)-R(t)}^{\varphi(t)+R(t)}P(x,t)dx,$$ is a monotonously decaying function of time.
 
-For simplicity, we in the previous section used $x_l$, $x_r$ to parametrize the instantaneous domain of the Fokker-Planck equation. In the examples, and in the python module, we instead use the center path $$\varphi(t) = (x_r(t) + x_l(t))/2$$ and the radius $$R(t) = (x_r(t) - x_l(t))/2$$ of the instantaneous domain. We refer to the center path also as reference path, and the time-dependent domain as tube.
+The python module PyTubular implements perturbative analytical results for both the decay rate of the density, $$\alpha := - \frac{\partial_t P(t)}{P(t)},$$ as well as the normalized density within the domain,
+$$P^N(x,t) := \frac{ P(x,t)}{P(t)}.$$
+
+To indicate that $P$, $\alpha$, and $P^N$ depend on $\varphi$, $R$, we also write $\alpha \equiv \alpha_R^{\varphi}$, $P \equiv P_R^{\varphi}$, $P^N \equiv P_R^{\varphi,N}$.
+
 
 ## Examples
 
