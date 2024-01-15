@@ -16,7 +16,7 @@ $$P(\varphi(t)-R(t),t) = P(\varphi(t)+R(t),t) = 0$$
 
 for the density $P(x,t)$. Due to the absorbing boundary conditions, the total density within the domain, given by $$P(t) = \int_{\varphi(t)-R(t)}^{\varphi(t)+R(t)}P(x,t)dx,$$ is a monotonously decaying function of time.
 
-The python module PyTubular implements perturbative analytical results for both the decay rate of the density, $$\alpha := - \frac{\partial_t P(t)}{P(t)},$$ as well as the normalized density within the domain,
+The python module PyTubular implements perturbative analytical results for both the **decay rate** of the density, $$\alpha := - \frac{\partial_t P(t)}{P(t)},$$ as well as the **normalized density within the domain**,
 $$P^N(x,t) := \frac{ P(x,t)}{P(t)}.$$
 
 To indicate that $P$, $\alpha$, and $P^N$ depend on $\varphi$, $R$, we also write $\alpha \equiv \alpha_R^{\varphi}$, $P \equiv P_R^{\varphi}$, $P^N \equiv P_R^{\varphi,N}$.
