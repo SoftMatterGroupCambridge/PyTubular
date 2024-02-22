@@ -2,7 +2,7 @@
 
 ## About
 
-This module contains both sympy-based symbolic and numpy-based numerical tools for one-dimensional Fokker-Planck dynamics in a small time-dependent domain.
+This module contains both sympy-based symbolic and numpy-based numerical tools for one-dimensional Fokker-Planck dynamics in a small time-dependent domain, as derived in Ref. <a href="#ref_1">[1]</a>.
 
 More specifically, for a given drift $a(x,t)$ and diffusivity $D(x,t)$ we consider the Fokker-Planck equation
 
@@ -21,6 +21,7 @@ $$P^N(x,t) := \frac{ P(x,t)}{P(t)}.$$
 
 To indicate that $P$, $\alpha$, and $P^N$ depend on $\varphi$, $R$, we also write $\alpha \equiv \alpha_R^{\varphi}$, $P \equiv P_R^{\varphi}$, $P^N \equiv P_R^{\varphi,N}$.
 
+Note that if the diffusivity is independent of position and time, then the theory implemented here reduces to the results of Ref. <a href="#ref_2">[2]</a>.
 
 ## Examples
 
@@ -42,4 +43,6 @@ PyTubular requires sympy and numpy, the most probable tube example furthermore u
 
 ## References
 
-[to be added once the papers are on arXiv]
+<a id="ref_1">[1] **Sojourn probabilities in tubes and pathwise irreversibility for Itô processes**. J. Kappler, M. E. Cates, R. Adhikari. arXiv: [2009.04250](https://arxiv.org/abs/2009.04250).</a>
+
+<a id="ref_2">[2] **Stochastic action for tubes: Connecting path probabilities to measurement**. J. Kappler and R. Adhikari. Physical Review Research vol. 2, p. 023407, 2020. DOI: [10.1103/PhysRevResearch.2.023407](https://doi.org/10.1103/PhysRevResearch.2.023407).</a>

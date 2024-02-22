@@ -15,7 +15,7 @@ Bibliography
 
 [1] Sojourn probabilities in tubes and pathwise irreversibility for 
 	Ito processes. Julian Kappler, Michael E. Cates, Ronojoy Adhikari
-	(update reference once an arXiv version is available)
+	https://arxiv.org/abs/2009.04250
 
 ''';
 
@@ -1609,38 +1609,6 @@ class symbolic:
 		else:
 			return normalized_density
 
-
-
-	def find_MPT(self,xi,xf,
-						Nt=None,
-						N_modes=20,
-						order=5,
-						powers_separate=False,
-						full_output=True):
-
-		# relevant parameters:
-		# self.ti
-		# self.tf
-		# self.Nt
-		#
-		# need new:
-		# self.xi
-		# self.xf
-		# self.N_modes
-		# self.path_coefficients
-		#
-		self.ti = 0 # initial time
-		self.tf_set = False # final time not set
-		#
-		self.N_max = 6
-		self.Dk = sympy.symbols('D_0:%d'%self.N_max)
-		self.d_Dk = sympy.symbols('\dot{D}_0:%d'%self.N_max)
-		self.Ek = sympy.symbols('E_0:%d'%self.N_max)
-		self.d_Ek = sympy.symbols('\dot{E}_0:%d'%self.N_max)
-		#
-		# temporal parameters
-		self.Nt = 101 # temporal datapoints
-		self.Nt_set = False # for numerical simulation. If self.Nt is not
 
 
 	'''
